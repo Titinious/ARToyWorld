@@ -42,13 +42,13 @@ public class ARWorldObject : MyComponent
             if (HabitariumTerrain.Instance.lockMode)
             {
                 HabitariumTerrain.LockARWorldObject(this);
+                return;
             }
             else
             {
                 HabitariumTerrain.UnlockARWorldObject(this);
             }
-
-
+            
         }
 
         if (HabitariumTerrain.Instance.placeMode)

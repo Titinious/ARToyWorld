@@ -13,7 +13,7 @@ Material:
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 3100
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -53,9 +53,9 @@ Material:
     - _MaxWaterSpeed: 3.5714285
     - _SandHeight: -1
     - _Shininess: 1
-    - _Transparency: 0.314
+    - _Transparency: 0.031400003
     - _WaveSpeed: 0.9
     m_Colors:
-    - _Color: {r: 0, g: 0, b: 0, a: 1}
+    - _Color: {r: 0, g: 0, b: 0, a: 0.1}
     - _ReflectColor: {r: 0.7794118, g: 0.7794118, b: 0.7794118, a: 0.5019608}
     - _SpecColor: {r: 0.5441177, g: 0.5441177, b: 0.5441177, a: 1}
