@@ -21,7 +21,17 @@ MonoBehaviour:
     m_SerializedTextureGuid:
       m_GuidLow: 9575609791846290483
       m_GuidHigh: 5025771940376151322
-    m_Size: {x: 0.1, y: 0.06665}
+    m_Size: {x: 0.2, y: 0.1333}
     m_SpecifySize: 1
     m_Name: jungle
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: 36c01433665f84e31a053fbcf320bf45, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5259237437023432200
+      m_GuidHigh: 13461535153828810421
+    m_SerializedTextureGuid:
+      m_GuidLow: 13027610411227702098
+      m_GuidHigh: 11509954300267716169
+    m_Size: {x: 0.2, y: 0.112500004}
+    m_SpecifySize: 1
+    m_Name: jungle_2
+    m_Texture: {fileID: 2800000, guid: 516863525ea5b4cb49de6f287492bb9f, type: 3}

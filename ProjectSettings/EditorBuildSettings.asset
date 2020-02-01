@@ -95,9 +95,21 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/UX/SampleUXScene.unity
     guid: 3b42d67a72bbc4004bf713db0e312326
-  - enabled: 1
+  - enabled: 0
     path: Assets/MyScenes/JungleTracking.unity
     guid: 331534765d84f481a92513c4b497b02f
+  - enabled: 0
+    path: Assets/MyScenes/ARPingPong.unity
+    guid: 649bf7dd2f3a5403a9a349fdd06a7088
+  - enabled: 1
+    path: Assets/MyScenes/ARMap.unity
+    guid: 82402fa65130c43dd9f72015568b5e21
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: Assets/MyScenes/MyImageTracking.unity
+    guid: b38fdb95ce0d94256b14836d19638f89
   m_configObjects:
     com.unity.xr.arkit.PlayerSettings: {fileID: 11400000, guid: 2d5fb8e61571b4e3897f221189089fd6,
       type: 2}
