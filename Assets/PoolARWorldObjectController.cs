@@ -15,7 +15,6 @@ public class PoolARWorldObjectController : ARWorldObjectControl
         poolWaterMaterial = poolWaterMeshRenderer.materials[0];
 
         base._set(args);
-
     }
 
     protected override void entranceRatio(float value)
