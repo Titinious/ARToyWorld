@@ -17,6 +17,9 @@ public class ARWorldObject : MyComponent
 
     int notDetectCnt = 0;
 
+    [SerializeField]
+    bool exemptPlacement = false;
+
     protected override void _set(Dictionary<string, object> args = null)
     {
         originalLocalPose.position = transform.localPosition;
@@ -51,7 +54,7 @@ public class ARWorldObject : MyComponent
             
         }
 
-        if (HabitariumTerrain.Instance.placeMode)
+        if (HabitariumTerrain.Instance.placeMode && !exemptPlacement)
         {
             // Bit shift the index of the layer (8) to get a bit mask
             int layerMask = 1 << LayerMask.NameToLayer("Terrain");

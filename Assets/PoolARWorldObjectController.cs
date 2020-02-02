@@ -21,7 +21,10 @@ public class PoolARWorldObjectController : ARWorldObjectControl
     {
         base.entranceRatio(value);
 
-        poolWaterMaterial.SetFloat("_Transparency", value * poolWaterOriginalTransparency);
+        float poolWaterTransparency = value * poolWaterOriginalTransparency;
+        //Debug.Log(poolWaterTransparency);
+
+        poolWaterMaterial.SetFloat("_Transparency", poolWaterTransparency);
     }
 
     // Start is called before the first frame update

@@ -10,21 +10,33 @@ public class ARWorldObjectControl : MyComponent
     [SerializeField]
     protected Material[] materials;
 
+    [SerializeField]
+    protected bool isTigerObject = false;
+
+    protected 
+
     bool isShowing = false;
 
-    float hideEntranceRatio = 0.1f;
+
+    //float hideEntranceRatio = 0.2f;
+    float hideEntranceRatio = 1.0f;
 
     protected override void _set(Dictionary<string, object> args = null)
     {
         base._set(args);
 
         MeshRenderer[] meshRends = this.GetComponentsInChildren<MeshRenderer>();
+        SkinnedMeshRenderer[] skinMeshRends = this.GetComponentsInChildren<SkinnedMeshRenderer>();
 
-        materials = new Material[meshRends.Length];
+        materials = new Material[meshRends.Length + skinMeshRends.Length];
 
         for(int i=0; i<meshRends.Length; i++)
         {
             materials[i] = meshRends[i].materials[0];
+        }
+        for (int i = 0; i < skinMeshRends.Length; i++)
+        {
+            materials[meshRends.Length + i] = skinMeshRends[i].materials[0];
         }
 
         entranceRatio(hideEntranceRatio);
@@ -34,9 +46,12 @@ public class ARWorldObjectControl : MyComponent
     {
         for (int i = 0; i < materials.Length; i++)
         {
-            Color matColor = materials[i].color;
-            matColor.a = value;
-            materials[i].color = matColor;
+            if (materials[i] != null)
+            {
+                Color matColor = materials[i].color;
+                matColor.a = value;
+                materials[i].color = matColor;
+            }
         }
     }
 
@@ -66,6 +81,14 @@ public class ARWorldObjectControl : MyComponent
                 {
                     this.entranceRatio(_ratio);
                 }, hideEntranceRatio, 1.0f, 1.0f);
+            }
+        }
+
+        if (isTigerObject)
+        {
+            if (Input.GetKeyDown(KeyCode.Y))
+            {
+
             }
         }
     }
